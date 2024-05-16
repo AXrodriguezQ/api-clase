@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { GamesModule } from './module/games/games.module';
 
 @Module({
   imports: [ TypeOrmModule.forRoot({
@@ -11,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     database: 'books_2',
     autoLoadEntities: true,
     synchronize: true
-  })],
+  }), GamesModule],
 })
 
 export class AppModule {}
